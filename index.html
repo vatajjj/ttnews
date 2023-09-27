@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>Morning Download | Subscribe Today</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta name="color-scheme" content="light only" />
+		<meta name="description" content="Finance + Economics + Markets" />
+		<meta property="og:site_name" content="Morning Download | Subscribe Today" />
+		<meta property="og:title" content="Morning Download | Subscribe Today" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="Finance + Economics + Markets" />
+		<link rel="stylesheet" href="main.css" />
+    
+    <script>
+		!function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+		},s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='https://static.ads-twitter.com/uwt.js',
+		a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+		twq('config','ofe4v');
+		</script>
+    
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("form1"); 
+
+    form.addEventListener("submit", function(event) {
+
+        const emailInput = form.querySelector("#form1-email");
+        const email = emailInput ? emailInput.value : null;
+
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const twclid = urlParams.get('twclid');
+
+        // Check if at least one of them is present
+        if (email || twclid) {
+            // Prepare payload
+            const payload = {
+                click_id: twclid ? twclid : null,
+                email: email ? email : null,
+                site: "morningdownload.co"
+            };
+
+           
+            fetch('/api/submit', {  
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);  // Log the response from the server
+            })
+            .catch(error => {
+                console.error("Error sending data:", error);
+            });
+
+
+            console.log('Success! Data sent.');
+
+            // Fire the first Twitter conversion tracking event
+            twq('event', 'tw-ofe4v-ogmi6', {});
+
+            // Fire the second Twitter conversion tracking event
+            twq('event', 'tw-ofe4v-ogcl3', {});
+
+        } else {
+            // Log an error or take appropriate action (optional)
+            console.log("Both twclid and email are missing. Not sending data.");
+        }
+    }, false); // The 'false' here makes sure this event listener doesn't capture the event before others
+});
+    </script>
+      
+    <script async src="https://js.sparkloop.app/team_e236af8a155f.js" data-sparkloop></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="main">
+				<div class="inner">
+					<div id="container01" class="container columns">
+						<div class="wrapper">
+							<div class="inner">
+								<div>
+									<div id="image02" class="image">
+										<span class="frame"><img src="assets/images/image02.png" alt="" /></span>
+									</div>
+									<h1 id="text01">Become a better investor in just 5 minutes 💰</h1>
+									<h3 id="text02">Get the latest market insights + investing tips, written by our team of former Wall Street analysts and delivered to your inbox each morning.</h3>
+									<form id="form1" method="post" action="/api/submit" class="formclass">
+										<div class="inner">
+											<div class="field">
+												<input type="email" name="email" id="form1-email" placeholder="Email" maxlength="128" required />
+											</div>
+											<div class="actions">
+												<button type="submit">Subscribe For Free</button>
+											</div>
+										</div>
+									</form>
+									<p id="text05">Join our community of <strong><span style="color: #0066FF">55,000+</span></strong> investors and finance professionals.</p>
+								</div>
+								<div>
+									<div id="image01" class="image" data-visibility="desktop">
+										<span class="frame deferred"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjAiIHk9IjAiIHZpZXdCb3g9IjAgMCA5MDcgMTU3MiIgd2lkdGg9IjkwNyIgaGVpZ2h0PSIxNTcyIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48cmVjdCBmaWxsPSJ0cmFuc3BhcmVudCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg%3D%3D" data-src="assets/images/image01.png" alt="" /></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<p id="text04">©2023 Morning Download</p>
+				</div>
+			</div>
+		</div>
+    		<script type="text/javascript">
+		twq('event', 'tw-ofe4v-ogmic', {
+		});
+		</script>
+	</body>
+</html>
